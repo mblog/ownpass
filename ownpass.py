@@ -4,7 +4,7 @@ from tkinter.constants import RIGHT
 import tkinter.font as tkFont
 import random
 import string
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 from pykeepass import PyKeePass
 import pyperclip as pc
 
@@ -50,10 +50,11 @@ myFont = tkFont.Font(size=20,weight='bold')
 root.title("Passwort Generator")
 root.iconphoto(False,tkinter.PhotoImage(file='CODING.SCHULE.png'))
 
-img = Image.open('CODING.SCHULE.png')
-img = img.resize((75,75))
-img = ImageTk.PhotoImage(img)
+#img = Image.open('CODING.SCHULE.png')
+#img = img.resize((75,75))
+#img = ImageTk.PhotoImage(img)
 
+img = tkinter.PhotoImage(file="CODING.SCHULE.gif")
 labelLogo = Label(master=root, image = img)
 labelLogo.grid(row=0,column=0,padx=20, pady=10)
 
