@@ -43,6 +43,7 @@ def delete():
 
 root = tkinter.Tk()
 root.resizable(width=False, height=False)
+root.geometry("+2500+400") # Place Window on my second screen
 
 # Schriften definieren
 myFont = tkFont.Font(size=20,weight='bold')
@@ -82,6 +83,9 @@ try:
     inputTitle = Entry(root, font=myFont)
     inputTitle.grid(row=6)
     listboxEntries = Listbox(root,font=myFont)
+
+    labelWelcome['text'] = "Passwort Manager"
+    root.title("Simple Passwort Manager")
 
     for element in kp.entries:
         listboxEntries.insert(listboxEntries.size()+1, element.title)
